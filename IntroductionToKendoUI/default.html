@@ -36,13 +36,15 @@
                     columns: [
                         { field: "year", title: "Year" },
                         { field: "make", title: "Make" },
-                        { field: "model", title: "Model" }
+                        { field: "model", title: "Model" },
+                        { command: ["edit", "destroy"]}
                     ],
                     scrollable: false,
                     pageable: true,
                     sortable: true,
                     groupable: true,
-                    filterable: true
+                    filterable: true,
+                    editable: "inline"
             });
             });
         </script>

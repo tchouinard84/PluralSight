@@ -19,21 +19,24 @@
                     car: "Lamborghini Gallardo",
                     brakeHorsePower: 560,
                     topSpeed: 192,
-                    zeroToSixty: 3.4,
+                    zeroToSixty: 3.41,
+                    quarterMile: 11.22,
                     basePrice: 202000
                 },
                 {
                     car: "Ferrari 458 Italia",
                     brakeHorsePower: 532,
                     topSpeed: 202,
-                    zeroToSixty: 3.0,
+                    zeroToSixty: 3.04,
+                    quarterMile: 10.86,
                     basePrice: 220000
                 },
                 {
                     car: "Porsche 911 GT2 R2",
                     brakeHorsePower: 620,
                     topSpeed: 218,
-                    zeroToSixty: 3.3,
+                    zeroToSixty: 3.38,
+                    quarterMile: 11.24,
                     basePrice: 254000
                 }
             ];
@@ -45,7 +48,10 @@
             $("#chart").kendoChart({
                 title: {text: "Dream Car Specs"},
                 dataSource: carSpecsDataSource,
-                series: [{ field: "zeroToSixty", name: "0 - 60 (secs)" }],
+                series: [
+                    { field: "zeroToSixty", name: "0 - 60 (secs)" },
+                    { field: "quarterMile", name: "1/4 Mile (secs)" }
+                ],
                 legend: {
                     position: "bottom"
                 },

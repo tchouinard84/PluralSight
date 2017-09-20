@@ -15,8 +15,13 @@
 
         <script type="text/javascript">
             $(function() {
-                
-            })
+                var temperatures = [68.4, 71.2, 86.9, 81.7, 79.8];
+
+                $("#chart").kendoChart({
+                    seriesDefaults: { type: "column" },
+                    series: [{ data: temperatures }]
+                });
+            });
         </script>
     </body>
 </html>

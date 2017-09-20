@@ -26,7 +26,14 @@
     </div>
     <script type="text/javascript">
             $(document).ready(function() {
-                $("#container").kendoValidator();
+                var validator = $("#container").kendoValidator().data("kendoValidator");
+
+                $("#save").on("click",
+                    function() {
+                        if (validator.validate()) {
+                            alert('Golden Pony Boy!');
+                        }
+                    });
             });
     </script>
 </body>

@@ -28,7 +28,7 @@
                     {year: 1972, make: "Jaguar", model: "E-Type"}
                 ];
 
-                var carsDataSource = new kendo.data.DataSource({ data: cars });
+                var carsDataSource = new kendo.data.DataSource({ data: cars, pageSize: 5 });
                 carsDataSource.read();
 
                 $("#cars").kendoGrid({
@@ -37,7 +37,9 @@
                         { field: "year", title: "Year" },
                         { field: "make", title: "Make" },
                         { field: "model", title: "Model" }
-                    ]
+                    ],
+                    scrollable: false,
+                    pageable: true
                 });
             });
         </script>

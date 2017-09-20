@@ -26,7 +26,17 @@
     </div>
     <script type="text/javascript">
             $(document).ready(function() {
-                var validator = $("#container").kendoValidator().data("kendoValidator");
+                var validator = $("#container").kendoValidator({
+                    rules: {
+                        noKia: function(input) {
+                            if (input.is("[name=make]")) {
+                                return input.val().toLowerCase() !== "kia";
+                            }
+                            return true;
+                        }
+                    },
+                    messages: {noKia: "Kia?  Seriously?  I don't think so."}
+                }).data("kendoValidator");
 
                 $("#save").on("click",
                     function() {

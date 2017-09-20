@@ -55,7 +55,15 @@
                 legend: {
                     position: "bottom"
                 },
-                categoryAxis: [{field: "car"}]
+                categoryAxis: [{ field: "car" }],
+                valueAxis: {
+                    majorGridLines: {color: "black"},
+                    minorGridLines: { visible: true, dashType: "longDash" },
+                    minorUnit: 0.25
+                },
+                tooltip: {
+                    visible: true
+                }
             });
         </script>
     </body>

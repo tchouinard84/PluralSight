@@ -15,7 +15,7 @@
     <div id="container">
         <input data-bind="value: make" data-value-update="keyup"/><br/>
         <span data-bind="visible: messageIsVisible">
-            <label data-bind="text: make"></label> 's ROCK
+            <label data-bind="text: make"></label>'s ROCK
         </span><br/>
         <input type="button" data-bind="click: showMessage" value="Click Me"/>
     </div>
@@ -24,13 +24,15 @@
                 var viewModel = kendo.observable({
                     make: "Ferrari",
                     messageIsVisible: function() {
-                        return this.get("make").length != 0;
+                        return this.get("make").length !== 0;
                     },
                     showMessage: function() {
                         var make = this.get("make");
                         alert(make + "'s ROCK!!!");
                     }
                 });
+
+                kendo.bind($("#container"), viewModel);
             });
     </script>
 </body>

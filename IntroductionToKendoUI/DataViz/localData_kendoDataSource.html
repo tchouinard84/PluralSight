@@ -43,8 +43,13 @@
             });
 
             $("#chart").kendoChart({
+                title: {text: "Dream Car Specs"},
                 dataSource: carSpecsDataSource,
-                series: [{ field: "brakeHorsePower" }]
+                series: [{ field: "zeroToSixty", name: "0 - 60 (secs)" }],
+                legend: {
+                    position: "bottom"
+                },
+                categoryAxis: [{field: "car"}]
             });
         </script>
     </body>
